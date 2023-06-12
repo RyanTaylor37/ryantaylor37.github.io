@@ -14,7 +14,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### 'npx json-server --watch data/db.json --port 8000
+### 'npx json-server --watch data/db.json --port 8000'
 
 Run above code in separate terminal that 'npm start' command 
 Runs json-server locally to keep track of database changes in real time
@@ -73,3 +73,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### 'node_modules/.bin/firebae hosting:channel:deploy stage --expires 2d'
+
+Creates a preview channel {stage} which deploys temporary website (url) for {2d} - 2 days
+
+### 'node_modules/.bin/firebae hosting:channel:delete stage'
+
+Deletes  preview channel {stage} 
