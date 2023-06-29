@@ -72,3 +72,30 @@ Yes, you can fork this repo. Please give proper credit by linking back to [britt
 | Lightest Slate | ![#ccd6f6](https://via.placeholder.com/10/ccd6f6?text=+) `#ccd6f6` |
 | White          | ![#e6f1ff](https://via.placeholder.com/10/e6f1ff?text=+) `#e6f1ff` |
 | Green          | ![#64ffda](https://via.placeholder.com/10/64ffda?text=+) `#64ffda` |
+
+
+
+Steps to push to deployment
+git clone
+
+cd chandrikadeb7.github.io
+
+source ~/.nvm/nvm.sh
+
+nvm install node (version 16)
+
+npm install -g yarn
+
+yarn
+
+npm install -g gatsby-cli
+
+npm install
+
+git add .
+
+git commit -am "changes"
+
+gatsby build
+
+npm run deploy
