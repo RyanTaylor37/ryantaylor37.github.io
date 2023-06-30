@@ -1,38 +1,34 @@
 module.exports = {
-  siteTitle: 'Chandrika Deb | Software Developer | Content Freelancer',
+  siteTitle: 'Ryan Taylor | Embedded Systems Engineer',
   siteDescription:
-    'Chandrika Deb is a Software Developer at Amdocs, who loves learning new things and helping tech beginners.',
+    'Ryan Taylor is a rising senior at Vanderbilt University, majoring in Electrical and Computer Engineering  and has a passion for embedded systems',
   siteKeywords:
-    'Chandrika Deb, Chandrika, Deb, chandrikadeb7, software developer, software engineer, content freelancer, face mask, face mask detection, web developer, java developer, pepper content, jamshedpur, amdocs, bit, mesra',
-  siteUrl: 'https://chandrikadeb7.github.io/',
+    'Ryan Taylor, Ryan, Taylor, ryantaylor37, embedded systems, robotics, electronics',
+  siteUrl: 'https://mywebsite-e2a61.web.app/',
   siteLanguage: 'en_US',
   googleAnalyticsID: 'UA-45666519-2',
   googleVerification: 'DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk',
-  name: 'Chandrika Deb',
-  location: 'Jamshedpur, India',
-  email: 'chandrikadeb7@gmail.com',
-  github: 'https://github.com/chandrikadeb7',
+  name: 'Ryan Taylor',
+  location: 'Cedar Hill, Texas',
+  email: 'ryan.c.taylor@vanderbilt.edu',
+  github: 'https://github.com/RyanTaylor37',
   twitterHandle: '@chandrikadeb7',
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/chandrikadeb7',
+      url: 'https://github.com/RyanTaylor37',
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/chandrika-deb/',
-    },
-    {
-      name: 'Codepen',
-      url: 'https://codepen.io/chandrikadeb7',
+      url: 'https://www.linkedin.com/in/ryan-c-taylor37/',
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/chandrikadeb7',
+      url: 'https://www.instagram.com/rstar0509/',
     },
     {
       name: 'Twitter',
-      url: 'https://twitter.com/chandrikadeb7',
+      url: 'https://twitter.com/RyanTay73717055',
     },
   ],
 
