@@ -4,6 +4,8 @@ import { FormattedIcon } from '@components/icons';
 import { socialMedia } from '@config';
 import styled from 'styled-components';
 import { theme, mixins, media } from '@styles';
+import IconCopyRight from './icons/copyright';
+import IconGitHub from './icons/github';
 const { colors, fontSizes, fonts } = theme;
 
 const StyledContainer = styled.footer`
@@ -49,7 +51,7 @@ const StyledGitHubInfo = styled.div`
 
   & > span {
     display: inline-flex;
-    align-items: center;
+    align-items: right;
     margin: 0 7px;
   }
   svg {
@@ -108,8 +110,8 @@ const Footer = () => {
           <div>
             Designed &amp; Built by Brittany Chiang<br></br>
             Revised by Ryan Taylor
-          </div>
-
+          </div> 
+          {FormattedIcon(IconGitHub)}         
           {githubInfo.stars && githubInfo.forks && (
             <StyledGitHubInfo>
               <span>
