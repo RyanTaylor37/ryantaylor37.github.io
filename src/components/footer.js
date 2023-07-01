@@ -111,7 +111,7 @@ const Footer = () => {
             Designed &amp; Built by Brittany Chiang<br></br>
             Revised by Ryan Taylor
           </div> 
-          {FormattedIcon(IconGitHub)}         
+          {/* {FormattedIcon(IconGitHub)}          */}
           {githubInfo.stars && githubInfo.forks && (
             <StyledGitHubInfo>
               <span>

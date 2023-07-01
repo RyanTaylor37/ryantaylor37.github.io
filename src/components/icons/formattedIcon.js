@@ -16,7 +16,7 @@ import {
   IconStar,
   IconTwitter,
   IconZap,
-  IconCopyRight
+  // IconCopyRight
 } from '@components/icons';
 
 const FormattedIcon = ({ name }) => {
@@ -51,8 +51,8 @@ const FormattedIcon = ({ name }) => {
       return <IconTwitter />;
     case 'Zap':
       return <IconZap />;
-    case 'CopyRight':
-      return <IconCopyRight />;
+    // case 'CopyRight':
+    //   return <IconCopyRight />;
     default:
       return <IconExternal />;
 
