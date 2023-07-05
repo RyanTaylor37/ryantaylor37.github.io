@@ -38,10 +38,10 @@ const StyledGrid = styled.div`
 
   .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: auto auto auto;
     grid-gap: 5px;
     position: relative;
-    ${media.desktop`grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));`};
+    ${media.desktop`grid-template-columns: auto auto auto;`};
   }
 `;
 const StyledProjectInner = styled.div`
@@ -79,7 +79,7 @@ const StyledFolder = styled.div`
   }
 `;
 const StyledProjectLinks = styled.div`
-  margin-right: -10px;
+  margin-right: -10px
   color: ${colors.lightSlate};
 `;
 const StyledIconLink = styled.a`
