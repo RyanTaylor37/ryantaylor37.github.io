@@ -1,13 +1,14 @@
 ---
 
-date: '2021-06-21'
+date: '2023-01-07'
 title: 'Autonomous Vehicle Simulation'
-github: 'https://github.com/vanderbiltrobotics'
-external: 'https://vanderbiltrobotics-1f015.web.app/'
+github: 'https://github.com/RyanTaylor37/VehicleSim'
+external: ''
 tech:
-  - IntelliJ Idea
-company: 'Amdocs'
+  - Julia
+company: 'Vanderbilt University'
 showInProjects: true
+slug: 'auto-vehicle-sim'
 ---
 
-IntelliJ Idea Tips and Tricks for Java/Spring Microservices Handling
+In my Autonomous Vehicles Course at Vanderbilt, me and my team developed a project to autonomously program controls on a car in order to traverse a road in a simulated environment.

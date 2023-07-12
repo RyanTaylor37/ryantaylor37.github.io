@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { graphql } from 'gatsby';
+import { graphql,Link, navigate } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import sr from '@utils/sr';
@@ -93,9 +93,18 @@ const StyledTable = styled.table`
     }
   }
 `;
-
+const StyledArchiveLink = styled(Link)`
+  ${mixins.inlineLink};
+  text-align: left;
+  margin: 0 auto;
+  font-family: ${fonts.SFMono};
+  font-size: ${fontSizes.sm};
+  &:after {
+    bottom: 0.1em;
+  }
+`;
 const ArchivePage = ({ location, data }) => {
-  const projects = data.allMarkdownRemark.edges;
+  const projects = data.allMarkdownRemark.nodes;
 
   const revealTitle = useRef(null);
   const revealTable = useRef(null);
@@ -110,13 +119,13 @@ const ArchivePage = ({ location, data }) => {
     <Layout location={location}>
       <Helmet>
         <title>Archive | Ryan Taylor</title>
-        <link rel="canonical" href="https://chandrikadeb7.github.io/archive" />
+        <link rel="canonical" href="https://mywebsite-e2a61.web.app//archive" />
       </Helmet>
 
       <StyledMainContainer>
         <header ref={revealTitle}>
           <h1 className="big-title">Archive</h1>
-          <p className="subtitle">A big list of things I’ve worked on</p>
+          <p className="subtitle">A Compendium of Things I’ve worked on</p>
         </header>
 
         <StyledTableContainer ref={revealTable}>
@@ -127,15 +136,15 @@ const ArchivePage = ({ location, data }) => {
                 <th>Title</th>
                 <th className="hide-on-mobile">Made at</th>
                 <th className="hide-on-mobile">Built with</th>
-                <th>Link</th>
+                <th>Links</th>
               </tr>
             </thead>
             <tbody>
               {projects.length > 0 &&
-                projects.map(({ node }, i) => {
-                  const { date, github, external, title, tech, company } = node.frontmatter;
+                projects.map((project, i) => {
+                  const { date, github, external, title, tech, company,slug,id } = project.frontmatter;
                   return (
-                    <tr key={i} ref={el => (revealProjects.current[i] = el)}>
+                    <tr key={i} ref={el => (revealProjects.current[i] = el)} onClick={()=>navigate("/project_page/"+slug)}>
                       <td className="overline year">{`${new Date(date).getFullYear()}`}</td>
 
                       <td className="title">{title}</td>
@@ -176,7 +185,7 @@ const ArchivePage = ({ location, data }) => {
                             </a>
                           )}
                         </span>
-                      </td>
+                      </td>                  
                     </tr>
                   );
                 })}
@@ -197,21 +206,20 @@ export default ArchivePage;
 export const pageQuery = graphql`
   {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/projects/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      filter: {fileAbsolutePath: {regex: "/pages/project_page/"}}
+      sort: {fields: frontmatter___date, order: DESC}
     ) {
-      edges {
-        node {
-          frontmatter {
-            date
-            title
-            tech
-            github
-            external
-            company
-          }
-          html
+      nodes {
+        frontmatter {
+          slug
+          external
+          github
+          date
+          title
+          tech
+          company
         }
+        id
       }
     }
   }

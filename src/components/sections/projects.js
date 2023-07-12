@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'gatsby';
+import { Link,navigate } from 'gatsby';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import sr from '@utils/sr';
@@ -35,13 +35,14 @@ const StyledArchiveLink = styled(Link)`
 const StyledGrid = styled.div`
   margin-top: 50px;
   margin-left: 10%;
-
   .projects {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
     grid-gap: 5px;
     position: relative;
-    ${media.desktop`grid-template-columns: auto auto auto;`};
+    ${media.desktop`grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));`};
+    // ${media.tablet`margin: 60px auto 0;`};
+    // ${media.phablet`width: 70%;`};
   }
 `;
 const StyledProjectInner = styled.div`
@@ -79,7 +80,7 @@ const StyledFolder = styled.div`
   }
 `;
 const StyledProjectLinks = styled.div`
-  margin-right: -10px
+  margin-right: -10px;
   color: ${colors.lightSlate};
 `;
 const StyledIconLink = styled.a`
@@ -148,15 +149,15 @@ const Projects = ({ data }) => {
     <StyledContainer>
       <StyledTitle ref={revealTitle}>Other Noteworthy Projects</StyledTitle>
       <StyledArchiveLink to="/archive" ref={revealArchiveLink}>
-        View the Archive
+        View Complete List of Projects
       </StyledArchiveLink>
 
       <StyledGrid>
         <TransitionGroup className="projects">
           {projectsToShow &&
             projectsToShow.map(({ node }, i) => {
-              const { frontmatter, html } = node;
-              const { github, external, title, tech } = frontmatter;
+              const { frontmatter, html,id } = node;
+              const { github, external, title, tech, slug} = frontmatter;
               return (
                 <CSSTransition
                   key={i}
@@ -169,7 +170,8 @@ const Projects = ({ data }) => {
                     tabIndex="0"
                     style={{
                       transitionDelay: `${i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0}ms`,
-                    }}>
+                    }}
+                    onClick={()=>navigate("/project_page/"+slug)}>
                     <StyledProjectInner>
                       <header>
                         <StyledProjectHeader>

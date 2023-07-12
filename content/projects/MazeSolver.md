@@ -1,13 +1,15 @@
 ---
 
-date: '2021-06-21'
+date: '2021-01-07'
 title: 'MazeSolver'
-github: 'https://github.com/vanderbiltrobotics'
-external: 'https://vanderbiltrobotics-1f015.web.app/'
+github: 'https://github.com/RyanTaylor37/MazeSolver'
+external: ''
 tech:
-  - IntelliJ Idea
-company: 'Amdocs'
+  - Assembly
+  - C/C++
+company: 'Microcontrollers'
 showInProjects: true
+slug: 'laser-tracker'
 ---
 
-IntelliJ Idea Tips and Tricks for Java/Spring Microservices Handling
+Encoded a Pololu 3Pi Robot to navigate and traverse a maze autonomously. Then calculate the optimal path and traverse the maze a second time without making any redundant traversals.

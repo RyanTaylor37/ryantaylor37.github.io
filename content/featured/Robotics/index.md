@@ -1,9 +1,10 @@
 ---
 date: '3'
-title: 'Vanderbilt Robotics Team'
+title: 'Vanderbilt Robotics Team: Lunabot'
 cover: 'robopic.jpg'
-github: 'https://github.com/vanderbiltrobotics/lunabot-2023'
+github: 'https://github.com/vanderbiltrobotics'
 external: 'https://vanderbiltrobotics-1f015.web.app/'
+slug: 'vandy-robotics'
 tech:
   - ROS2
   - OpenCV

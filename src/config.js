@@ -12,7 +12,6 @@ module.exports = {
   location: 'Cedar Hill, Texas',
   email: 'ryan.c.taylor@vanderbilt.edu',
   github: 'https://github.com/RyanTaylor37',
-  twitterHandle: '@chandrikadeb7',
   socialMedia: [
     {
       name: 'GitHub',
