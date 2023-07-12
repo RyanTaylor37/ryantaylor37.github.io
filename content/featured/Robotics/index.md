@@ -13,4 +13,4 @@ tech:
 showInProjects: true
 ---
 
-As a part of the Vanderbilt Robotics Team competing in the NASA Lunabotics competition, we built an autonomous robot that can navigate in a lunar environment to extract materials from the ground and then travel to a deposition site to deposit acquired material.
+Insert Text Here

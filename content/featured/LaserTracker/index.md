@@ -12,4 +12,4 @@ showInProjects: true
 slug: 'laser-tracker'
 ---
 
-Using the FreeNove robot, I made an autonomous algorithm that allows the robot to follow a user-guided laser and then retraverse the trajectory outlined with the laser.
+Insert Text Here
