@@ -12,4 +12,4 @@ showInProjects: true
 slug: 'laser-tracker'
 ---
 
-Programmed a FreeNove robot to autonomously follow a user-guided laser and record its trajectory and retraverse the path it travels from its starting position
+Programmed a FreeNove robot to autonomously follow a user-guided laser and record its trajectory and retraverse the path it travels from its starting position.
