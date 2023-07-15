@@ -37,19 +37,12 @@ const StyledGrid = styled.div`
   margin-left: 10%;
   .projects {
     display: grid;
-<<<<<<< HEAD
     grid-template-columns: repeat(3, minmax(200px, 1fr));
     grid-gap: 5px;
     position: relative;
     ${media.desktop`grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));`};
     // ${media.tablet`margin: 60px auto 0;`};
     // ${media.phablet`width: 70%;`};
-=======
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 5px;
-    position: relative;
-    ${media.desktop`grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));`};
->>>>>>> parent of 112c84e3 (almost there)
   }
 `;
 const StyledProjectInner = styled.div`
