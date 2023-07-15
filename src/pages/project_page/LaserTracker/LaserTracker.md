@@ -1,6 +1,6 @@
 ---
 
-date: '2021-08-23'
+date: '2022-08-23'
 title: 'LaserTracker'
 github: 'https://github.com/vanderbiltrobotics'
 external: 'https://vanderbiltrobotics-1f015.web.app/'

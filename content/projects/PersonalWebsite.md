@@ -13,4 +13,4 @@ showInProjects: true
 slug: 'personal-website'
 ---
 
-I built a project portfolio website using Gatsby a React web-dev framework
+I developed a Project Portfolio Website as a way to compile and display all the projects I've worked on using Gatsby, JavaScript, and GraphQL.
