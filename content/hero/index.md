@@ -3,6 +3,7 @@ title: 'Hello World! My name is'
 name: 'Ryan Taylor'
 subtitle: 'This is my Personal Website!'
 buttonText: 'Contact Me'
+cover: 'ryantaylor.jpg'
 ---
 
 I'm currently a rising senior at Vanderbilt University, majoring in Electrical and Computer Engineering and minoring in Computer Science.

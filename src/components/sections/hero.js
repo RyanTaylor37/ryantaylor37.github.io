@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { email } from '@config';
+import { email,srConfig, github } from '@config';
 import styled from 'styled-components';
 import { theme, mixins, media, Section } from '@styles';
 const { colors, fontSizes, fonts, navDelay, loaderDelay } = theme;
+import Img from 'gatsby-image';
 
 const StyledContainer = styled(Section)`
   ${mixins.flexCenter};
@@ -16,6 +17,11 @@ const StyledContainer = styled(Section)`
     width: 100%;
   }
 `;
+const StyledFlexContainer = styled.div`
+  ${mixins.flexBetween};
+  align-items: flex-start;
+  ${media.tablet`display: block;`};
+`;
 const StyledOverline = styled.h1`
   color: ${colors.green};
   margin: 0 0 20px 3px;
@@ -24,6 +30,14 @@ const StyledOverline = styled.h1`
   font-weight: normal;
   ${media.desktop`font-size: ${fontSizes.sm};`};
   ${media.tablet`font-size: ${fontSizes.smish};`};
+`;
+const StyledContent = styled.div`
+  width: 60%;
+  max-width: 480px;
+  ${media.tablet`width: 100%;`};
+  a {
+    ${mixins.inlineLink};
+  }
 `;
 const StyledTitle = styled.h2`
   font-size: 80px;
@@ -56,6 +70,78 @@ const StyledEmailLink = styled.a`
   margin-top: 50px;
 `;
 
+const StyledPic = styled.div`
+  position: relative;
+  width: 40%;
+  max-width: 300px;
+  margin-left: 60px;
+  ${media.tablet`margin: 60px auto 0;`};
+  ${media.phablet`width: 70%;`};
+  a {
+    &:focus {
+      outline: 0;
+    }
+  }
+`;
+const StyledAvatar = styled(Img)`
+  position: relative;
+  mix-blend-mode: multiply;
+  filter: grayscale(100%) contrast(1);
+  border-radius: ${theme.borderRadius};
+  transition: ${theme.transition};
+`;
+
+const StyledResumeLink = styled.a`
+  ${mixins.smallButton};
+  margin-left: 10px;
+  font-size: ${fontSizes.smish};
+`;
+
+const StyledAvatarLink = styled.a`
+  ${mixins.boxShadow};
+  width: 100%;
+  position: relative;
+  border-radius: ${theme.borderRadius};
+  background-color: ${colors.lightestSlate};
+  margin-left: -20px;
+  &:hover,
+  &:focus {
+    background: transparent;
+    &:after {
+      top: 15px;
+      left: 15px;
+    }
+    ${StyledAvatar} {
+      filter: none;
+      mix-blend-mode: normal;
+    }
+  }
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: ${theme.borderRadius};
+    transition: ${theme.transition};
+  }
+  &:before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: ${colors.navy};
+    mix-blend-mode: screen;
+  }
+  &:after {
+    border: 2px solid ${colors.green};
+    top: 10px;
+    left: 10px;
+    z-index: -1;
+  }
+`;
+
 const Hero = ({ data }) => {
   const [isMounted, setIsMounted] = useState(false);
 
@@ -86,19 +172,44 @@ const Hero = ({ data }) => {
       <StyledEmailLink href={`mailto:${email}`}>Contact Me</StyledEmailLink>
     </div>
   );
+  const six = () => (
+    <StyledPic style={{ transitionDelay: '400ms' }}>
+      <StyledAvatarLink href="/resume.pdf" target="_blank">
+        <StyledAvatar fluid={frontmatter.cover.childImageSharp.fluid} alt="Cover" />
+      </StyledAvatarLink>
+    </StyledPic>
+  );
 
-  const items = [one, two, three, four, five];
+  const items = [one, two, three];
+  const items2 = [six]; 
+  const items3 = [four,five];
 
   return (
     <StyledContainer>
-      <TransitionGroup component={null}>
-        {isMounted &&
-          items.map((item, i) => (
-            <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
-              {item}
-            </CSSTransition>
+        <TransitionGroup component={null}>
+          {isMounted &&
+              items.map((item, i) => (
+                <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
+                  {item}
+                </CSSTransition>
           ))}
-      </TransitionGroup>
+          <StyledFlexContainer>
+            <StyledContent>
+              {isMounted &&
+                  items3.map((item, i) => (
+                    <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
+                      {item}
+                    </CSSTransition>
+              ))}
+            </StyledContent>
+            {isMounted &&
+                  items2.map((item, i) => (
+                    <CSSTransition key={i} classNames="fadeup" timeout={loaderDelay}>
+                      {item}
+                    </CSSTransition>
+              ))}
+          </StyledFlexContainer>
+        </TransitionGroup>
     </StyledContainer>
   );
 };

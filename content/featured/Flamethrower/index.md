@@ -2,7 +2,7 @@
 date: '1'
 title: 'Hand-held Flamethrower'
 cover: 'flamethrower.png'
-
+slug: 'flame-thrower'
 tech:
   - Circuitry
 showInProjects: true

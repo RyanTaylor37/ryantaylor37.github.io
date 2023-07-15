@@ -1,14 +1,14 @@
 ---
 
-date: '2021-06-21'
-title: 'Flamethower'
+date: '2020-05-15'
+title: 'Flamethrower'
 github: ''
-external: 'https://chandrikadeb7.github.io/IntelliJ-Idea-Tips-n-Tricks/'
+external: ''
 tech:
   - Arc-Lighter
   - Circuitry
-
 showInProjects: true
+slug: 'flame-thrower'
 ---
 
-IntelliJ Idea Tips and Tricks for Java/Spring Microservices Handling
+Constructed a handheld flamethrower, by deconstructing and reassembling two lighters that utilize electric arcs and depressurized canisters to release and inflame lighter fluid an extended distance.

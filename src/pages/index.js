@@ -38,7 +38,14 @@ export const pageQuery = graphql`
             title
             name
             subtitle
-            buttonText
+            buttonText 
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
           }
           html
         }
@@ -96,6 +103,7 @@ export const pageQuery = graphql`
             tech
             github
             external
+            slug
           }
           html
         }
@@ -115,8 +123,10 @@ export const pageQuery = graphql`
             tech
             github
             external
+            slug
           }
           html
+          id
         }
       }
     }

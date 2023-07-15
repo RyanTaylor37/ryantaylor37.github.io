@@ -7,6 +7,7 @@ import { FormattedIcon } from '@components/icons';
 import styled from 'styled-components';
 import { theme, mixins, media, Section, Heading } from '@styles';
 const { colors, fontSizes, fonts } = theme;
+import { navigate } from 'gatsby';
 
 const StyledContainer = styled(Section)`
   ${mixins.flexCenter};
@@ -222,24 +223,19 @@ const Featured = ({ data }) => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover } = frontmatter;
+            const { external, title, tech, github, cover,slug } = frontmatter;
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <StyledContent>
                   <StyledLabel>Featured Project</StyledLabel>
-                  <StyledProjectName>
-                    {external ? (
-                      <a
-                        href={external}
+                  <StyledProjectName onClick={()=>navigate("/project_page/"+slug)}>
+                    <a
                         target="_blank"
                         rel="nofollow noopener noreferrer"
                         aria-label="External Link">
                         {title}
-                      </a>
-                    ) : (
-                      title
-                    )}
+                    </a>
                   </StyledProjectName>
                   <StyledDescription dangerouslySetInnerHTML={{ __html: html }} />
                   {tech && (
@@ -272,7 +268,7 @@ const Featured = ({ data }) => {
                 </StyledContent>
 
                 <StyledImgContainer
-                  href={external ? external : github ? github : '#'}
+                  onClick={()=>navigate("/project_page/"+ frontmatter.slug)}
                   target="_blank"
                   rel="nofollow noopener noreferrer">
                   <StyledFeaturedImg fluid={cover.childImageSharp.fluid} alt={title} />

@@ -2,12 +2,14 @@
 
 date: '2021-06-21'
 title: 'Electric Longboard'
-github: 'https://github.com/vanderbiltrobotics'
-external: 'https://vanderbiltrobotics-1f015.web.app/'
+github: ''
+external: ''
 tech:
-  - IntelliJ Idea
-company: 'Amdocs'
+  - Circuitry
+company: ''
 showInProjects: true
+slug: 'e-longboard'
 ---
 
-IntelliJ Idea Tips and Tricks for Java/Spring Microservices Handling
+Designed and built a Dual-Motor Hub Electric Longboard.
+Built schematic designs and assembled the longboard from constituent components to successfully operate and drive from a bluetooth controller.

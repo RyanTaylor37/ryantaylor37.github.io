@@ -124,7 +124,7 @@ const PensievePage = ({ location, data }) => {
     <Layout location={location}>
       <Helmet>
         <title>Pensieve | Ryan Taylor</title>
-        <link rel="canonical" href="https://chandrikadeb7.github.io/pensieve" />
+        <link rel="canonical" href="https://mywebsite-e2a61.web.app/pensieve" />
       </Helmet>
 
       <StyledMainContainer>

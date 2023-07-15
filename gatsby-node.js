@@ -35,8 +35,28 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `);
 
+  const {data} = await graphql(`
+    query Projects {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/pages/project_page/"}}) {
+        nodes {
+          frontmatter {
+            slug
+          }
+        }
+      }
+    }
+  `)
+
+  data.allMarkdownRemark.nodes.forEach(node => {
+    actions.createPage({
+      path: '/project_page/'+ node.frontmatter.slug,
+      component: path.resolve('./src/templates/project-details.js'),
+      context: { slug: node.frontmatter.slug }
+    })
+  })
+
   // Handle errors
-  if (result.errors) {
+  if (result.errors || data.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`);
     return;
   }
