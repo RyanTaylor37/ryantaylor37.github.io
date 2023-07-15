@@ -1,13 +1,16 @@
 ---
 
-date: '2021-06-21'
+date: '2023-05-15'
 title: 'Personal Website'
-github: 'https://github.com/vanderbiltrobotics'
-external: 'https://vanderbiltrobotics-1f015.web.app/'
+github: 'https://github.com/RyanTaylor37/ryantaylor37.github.io'
+external: 'https://mywebsite-e2a61.web.app/'
 tech:
-  - IntelliJ Idea
-company: 'Amdocs'
+  - React
+  - Gatsby
+  - Firebase
+company: 'Personal'
 showInProjects: true
+slug: 'personal-website'
 ---
 
-IntelliJ Idea Tips and Tricks for Java/Spring Microservices Handling
+I developed a Project Portfolio Website as a way to compile and display all the projects I've worked on using Gatsby, JavaScript, and GraphQL.

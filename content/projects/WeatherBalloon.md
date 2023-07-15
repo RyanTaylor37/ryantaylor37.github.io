@@ -1,13 +1,15 @@
 ---
 
-date: '2021-06-21'
+date: '2023-01-21'
 title: 'Weather Balloon'
-github: 'https://github.com/vanderbiltrobotics'
-external: 'https://vanderbiltrobotics-1f015.web.app/'
+github: 'https://github.com/RyanTaylor37/VUSAT_Programming/tree/master'
+external: ''
 tech:
-  - IntelliJ Idea
-company: 'Amdocs'
+  - Python
+  - Raspberry Pi
+company: 'Vanderbilt Satellite Club'
 showInProjects: true
+slug: 'vu-sat'
 ---
 
-IntelliJ Idea Tips and Tricks for Java/Spring Microservices Handling
+Designed circuitry and control logic to allow communications between weather balloon with ground operations and implementing relevant software on Raspberry Pi to successfully sample and broadcast sensory data with radio frequencies to ground.

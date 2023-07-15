@@ -9,6 +9,7 @@ tech:
   - OpenCV
   - RaspberryPi
 showInProjects: true
+slug: 'laser-tracker'
 ---
 
-Using the FreeNove robot, I made an autonomous algorithm that allows the robot to follow a user-guided laser and then retraverse the trajectory outlined with the laser.
+Programmed a FreeNove robot to autonomously follow a user-guided laser and record its trajectory and retraverse the path it travels from its starting position.

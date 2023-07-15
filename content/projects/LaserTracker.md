@@ -1,13 +1,15 @@
 ---
 
-date: '2021-06-21'
+date: '2021-08-23'
 title: 'LaserTracker'
-github: 'https://github.com/vanderbiltrobotics'
-external: 'https://vanderbiltrobotics-1f015.web.app/'
+github: 'https://github.com/RyanTaylor37/LaserTracker'
+external: ''
 tech:
-  - IntelliJ Idea
-company: 'Amdocs'
+  - Raspberry Pi
+  - Python
+company: 'Embedded Systems'
 showInProjects: true
+slug: 'laser-tracker'
 ---
 
-IntelliJ Idea Tips and Tricks for Java/Spring Microservices Handling
+Using the FreeNove robot, I programmed an autonomous algorithm that allows the robot to follow a user-guided laser and then retraverse the trajectory outlined with the laser.
