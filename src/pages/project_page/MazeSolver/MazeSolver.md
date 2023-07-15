@@ -1,7 +1,7 @@
 ---
 
 date: '2021-01-07'
-title: 'MazeSolver'
+title: 'Maze-Solver Robot'
 github: 'https://github.com/vanderbiltrobotics'
 external: 'https://vanderbiltrobotics-1f015.web.app/'
 tech:

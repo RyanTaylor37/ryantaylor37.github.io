@@ -12,4 +12,4 @@ showInProjects: true
 slug: 'vu-sat'
 ---
 
-Designed circuitry and control logic to allow communications between weather balloon with ground operations and implementing relevant software on Raspberry Pi to successfully sample and broadcast sensory data with radio frequencies to ground.
+Launched weather balloon to test preliminary designs and operating conditions for the PCB circuit, sensory devices, and communication systems.
