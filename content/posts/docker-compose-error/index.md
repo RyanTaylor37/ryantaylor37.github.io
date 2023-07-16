@@ -24,7 +24,7 @@ When trying to run this script via `./bin/composer install`, I got this error in
 ERROR: Setting workdir for exec is not supported in API < 1.35 (1.30)
 ```
 
-The error was coming from the `-w` flag in the `docker-compose exec` command in the `composer` script.
+The error was coming from the `-w` flag in the `docker-compose exec` command in the `composer` script..
 
 ## Solution
 
