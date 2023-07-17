@@ -1,7 +1,7 @@
 ---
 
 date: '2022-08-23'
-title: 'LaserTracker'
+title: 'Laser-Tracker Robot'
 github: 'https://github.com/vanderbiltrobotics'
 external: 'https://vanderbiltrobotics-1f015.web.app/'
 tech:
