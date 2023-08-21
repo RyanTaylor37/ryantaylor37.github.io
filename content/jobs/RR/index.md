@@ -10,6 +10,4 @@ url: 'https://www.rolls-royce.com/'
 
 - Comprehensively understand the architecture of the [AE3007N engine](https://www.rolls-royce.com/products-and-services/civil-aerospace/business-aviation/ae-3007.aspx#section-technology) and how its electro-mechanical systems are emulated within the Simulink model
 
-- Revised plotting scripts and interpolation algorithms needed to
-correlate engine simulation datasets and implement robust UI
-elements to facilitate analysis
+- Revised plotting scripts and interpolation algorithms needed to correlate engine simulation datasets and implement robust UI elements to facilitate analysis
