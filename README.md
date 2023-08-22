@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://github.com/RyanTaylor37/ryantaylor37.github.io/blob/dp/static/websitepic.png" width="100" />
+  <img alt="Logo" src="https://github.com/RyanTaylor37/ryantaylor37.github.io/blob/dp/src/images/sun.jpg" width="100" />
 </div>
 <h1 align="center">
   Portfolio Website
@@ -10,7 +10,7 @@
 
 
 <div align="center">
-  <img alt="Demo" src="https://github.com/RyanTaylor37/ryantaylor37.github.io/blob/dp/static/websitepic.png" />
+  <img alt="Demo" src="https://github.com/RyanTaylor37/ryantaylor37.github.io/blob/dp/static/weblogo.png" />
 </div>
 
 ### TL;DR
