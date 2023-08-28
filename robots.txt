@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://mywebsite-e2a61.web.app/sitemap-index.xml
+Host: https://mywebsite-e2a61.web.app
